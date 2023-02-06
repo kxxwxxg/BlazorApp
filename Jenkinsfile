@@ -8,7 +8,7 @@ pipeline {
     }
     stage('version') {
       steps {
-        sh '/opt/homebrew/bin/pip install selenium'
+        sh 'printenv'
       }
     }
     stage('hello') {
