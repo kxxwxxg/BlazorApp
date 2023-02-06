@@ -8,7 +8,7 @@ pipeline {
     }
     stage('version') {
       steps {
-        sh 'pip install selenium'
+        sh '/opt/homebrew/bin/pip install selenium'
       }
     }
     stage('hello') {
