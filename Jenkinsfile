@@ -6,7 +6,6 @@ pipeline {
         sh 'dotnet build'
       }
     }
-  stages {
     stage('version') {
       steps {
         sh 'python3 --version'
