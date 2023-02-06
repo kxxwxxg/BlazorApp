@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh 'dotnet build'
+        sh '/opt/homebrew/bin/dotnet build'
       }
     }
     stage('version') {
