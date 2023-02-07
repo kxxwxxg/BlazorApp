@@ -8,7 +8,7 @@ pipeline {
     }
     stage('version') {
       steps {
-        sh 'printenv'
+        sh 'python3 -m pip install selenium'
       }
     }
     stage('hello') {
