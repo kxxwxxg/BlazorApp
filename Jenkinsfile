@@ -13,6 +13,7 @@ pipeline {
     }
     stage('hello') {
       steps {
+        sh 'whoami'
         sh 'python3 hello.py'
       }
     }
