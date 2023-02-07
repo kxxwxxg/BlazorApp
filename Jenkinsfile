@@ -13,7 +13,7 @@ pipeline {
     }
     stage('hello') {
       steps {
-        sh 'whoami'
+        sh 'python3 -m pip install selenium'
         sh 'python3 hello.py'
       }
     }
