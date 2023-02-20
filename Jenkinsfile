@@ -8,8 +8,8 @@ pipeline {
     }
     stage('version') {
       steps {
-        sh 'python3 -m pip install pytest'
-        sh 'python3 -m pip install pytest-html'
+        sh 'sudo python3 -m pip install pytest'
+        sh 'sudo python3 -m pip install pytest-html'
       }
     }
     stage('hello') {
