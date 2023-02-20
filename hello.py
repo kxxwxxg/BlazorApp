@@ -6,7 +6,7 @@ driver = webdriver.Chrome('/opt/homebrew/bin/chromedriver')  # Optional argument
 # driver = webdriver.Chrome(ChromeDriverManager().install())
 driver.get('http://www.google.com/');
 time.sleep(5) # Let the user actually see something!
-search_box = driver.find_element_by_name('q')
+search_box = driver.find_element_by_xpath('/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/input')
 search_box.send_keys('ChromeDriver')
 search_box.submit()
 time.sleep(5) # Let the user actually see something!
