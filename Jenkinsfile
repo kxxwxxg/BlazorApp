@@ -22,10 +22,10 @@ pipeline {
     }
     stage('pytest'){
       steps{
+        publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'report', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
         sh 'pytest --version'
 //         sh 'pytest --html=report.html --self-contained-html'
       }
     }
   }
-  // publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'report', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
 }
