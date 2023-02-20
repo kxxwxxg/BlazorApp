@@ -19,5 +19,10 @@ pipeline {
         sh 'python3 hello.py'
       }
     }
+    stage('pytest'){
+      steps{
+        sh 'pytest test_sample.py --html=report/result.html --self-contained-html'
+      }
+    }
   }
 }
