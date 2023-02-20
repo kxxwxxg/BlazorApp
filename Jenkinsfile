@@ -22,7 +22,8 @@ pipeline {
     }
     stage('pytest'){
       steps{
-        sh 'pytest --html=report.html --self-contained-html'
+        sh 'pytest --version'
+//         sh 'pytest --html=report.html --self-contained-html'
       }
     }
   }
