@@ -21,7 +21,7 @@ pipeline {
     }
     stage('pytest'){
       steps{
-        sh 'pytest test_sample.py --html=report/result.html --self-contained-html'
+        sh 'pytest --html=report.html --self-contained-html'
       }
     }
   }
