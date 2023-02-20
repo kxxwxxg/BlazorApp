@@ -1,6 +1,7 @@
 import time
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.common.by import By
 
 driver = webdriver.Chrome('/opt/homebrew/bin/chromedriver')  # Optional argument, if not specified will search path.
 # driver = webdriver.Chrome(ChromeDriverManager().install())
