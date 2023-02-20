@@ -22,7 +22,6 @@ pipeline {
     }
     stage('pytest'){
       steps{
-        sh 'mkdir report'
         sh '/opt/homebrew/bin/pytest --html=index.html --self-contained-html'
         publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'report', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
       }
