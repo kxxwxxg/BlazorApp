@@ -8,7 +8,7 @@ pipeline {
     }
     stage('version') {
       steps {
-        sh 'python3 -m pip install selenium'
+        sh 'python3 -m pip install pytest'
       }
     }
     stage('hello') {
