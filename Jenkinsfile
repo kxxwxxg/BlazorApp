@@ -23,8 +23,8 @@ pipeline {
     stage('pytest'){
       steps{
 //         sh '/opt/homebrew/bin/pytest --html=index.html --self-contained-html'
-        sh '/opt/homebrew/bin/pytest test_suite.py --html=report/index.html --self-contained-html'
         publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: '${WORKSPACE}\\report\\', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
+        sh '/opt/homebrew/bin/pytest test_suite.py --html=report/index.html --self-contained-html'
       }
     }
   }
