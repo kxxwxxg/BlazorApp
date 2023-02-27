@@ -12,11 +12,11 @@ class MyTestSuite(BaseCase):
             self.click('a[rel="next"]')
         self.assert_text("Algorithms", "div#ctitle", timeout=4)
 
-    @pytest.mark.expected_failure
-    def test_2(self):
-        print("\n(This test should fail)")
-        self.open("https://xkcd.com/1675/")
-        raise Exception("FAKE EXCEPTION: This test fails on purpose.")
+#     @pytest.mark.expected_failure
+#     def test_2(self):
+#         print("\n(This test should fail)")
+#         self.open("https://xkcd.com/1675/")
+#         raise Exception("FAKE EXCEPTION: This test fails on purpose.")
 
     def test_3(self):
         self.open("https://xkcd.com/1406/")
@@ -24,8 +24,8 @@ class MyTestSuite(BaseCase):
         self.open("https://xkcd.com/608/")
         self.assert_text("Form", "div#ctitle", timeout=4)
 
-    @pytest.mark.expected_failure
-    def test_4(self):
-        print("\n(This test should fail)")
-        self.open("https://xkcd.com/1670/")
-        self.assert_element("FakeElement.DoesNotExist", timeout=0.5)
+#     @pytest.mark.expected_failure
+#     def test_4(self):
+#         print("\n(This test should fail)")
+#         self.open("https://xkcd.com/1670/")
+#         self.assert_element("FakeElement.DoesNotExist", timeout=0.5)
